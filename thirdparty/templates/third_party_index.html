@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Third Party Components</title></head>
+<body>
+    <div><h2>Third Party Components In Use.</h2></div>
+
+    {% if third_party_list %}
+        <table>
+            <tr>
+                <td>Component Name</td>
+                <td>Version</td>
+                <td>License</td>
+            </tr>
+            {% for component in third_party_list %}
+            <tr>
+                <td>{{ component.name }}</td>
+                <td>{{ component.version }}</td>
+                <td>{{ component.license }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No components are available.</p>
+    {% endif %}
+</body>
+</html>

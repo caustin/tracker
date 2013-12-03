@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Third Party Licenses</title></head>
+<body>
+    <div><h2>Third Party Licenses.</h2></div>
+
+    {% if license_list %}
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Brief Description</td>
+                <td>Url</td>
+                <td>Approved</td>
+            </tr>
+            {% for lic in license_list %}
+            <tr>
+                <td>{{ lic.name }}</td>
+                <td>{{ lic.brief_description }}</td>
+                <td>{{ lic.url }}</td>
+                <td>{{ lic.acceptable }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    {% else %}
+        <p>No components are available.</p>
+    {% endif %}
+</body>
+</html>
