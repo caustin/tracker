@@ -34,3 +34,6 @@ pip-log.txt
 # backup cruft
 *.old
 setup.cfg
+
+#django settings
+local_settings.py
